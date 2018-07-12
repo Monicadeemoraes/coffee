@@ -1,0 +1,140 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+}
+
+h1{
+    font-size: 40pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#animar{
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+}
+
+.item{
+    border-radius: 50%;
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    animation: esticar 1s linear infinite;
+}
+
+.item:nth-child(1){
+    animation-delay: 0s;
+}
+
+.item:nth-child(2){
+    animation-delay: 0.1s;
+}
+
+.item:nth-child(3){
+    animation-delay: 0.2s;
+}
+
+.item:nth-child(4){
+    animation-delay: 0.3s;
+}
+
+.item:nth-child(5){
+    animation-delay: 0.4s;
+}
+
+.item:nth-child(6){
+    animation-delay: 0.5s;
+}
+
+.item:nth-child(7){
+    animation-delay: 0.6s;
+}
+
+.item:nth-child(8){
+    animation-delay: 0.7s;
+}
+
+.item:nth-child(9){
+    animation-delay: 0.8s;
+}
+
+.item:nth-child(10){
+    animation-delay: 0.9s;
+}
+
+@media (max-width: 600px){
+    #animar{
+        display: block;
+    }
+
+    .item{
+        position: absolute;
+        left: 50%;
+        height: 50px;
+        width: 5px;
+        animation-name: girar;
+        animation-duration: 1s;
+        transform-origin: bottom;
+    }
+}
+
+@keyframes girar {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        background-color: red;
+        transform: rotate(0deg);
+    }
+    20%{
+        background-color: orange;
+        transform: rotate(0deg);
+    }
+    30%{
+        background-color: yellow;
+        transform: rotate(0deg);
+    }
+    40%{
+        background-color: yellowgreen;
+        transform: rotate(0deg);
+    }
+    50%{
+        background-color: lightblue;
+        transform: rotate(0deg);
+    }
+    60%{
+        background-color: indigo;
+        transform: rotate(360deg);
+    }
+    75%{
+        background-color: violet;
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes esticar{
+    0%{
+        transform: scaleY(1);
+    }
+    70%{
+        background-color: black;
+        transform: scaleY(1);
+    }
+    85%{
+        background-color: lightslategray;
+        transform: scaleY(2);
+    }
+    100%{
+        background-color: gray;
+        transform: scaleY(1);
+    }
+}
